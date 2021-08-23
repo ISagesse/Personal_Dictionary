@@ -9,6 +9,8 @@ def definition():
         print(data[words.lower()][0])
         if words.title() in data:
             print(data[words.title()][0])
+        elif words.capitalize() in data:
+            print(data[words.capitalize()][0])
     elif len(get_close_matches(words, data.keys())) > 0:
         decision = input(f"Did you mean {get_close_matches(words, data.keys())[0]} instead? Please enter yes or no: ")
         if decision == "yes":
